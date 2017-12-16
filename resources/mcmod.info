@@ -1,0 +1,16 @@
+[
+{
+  "modid": "fiskheroes",
+  "name": "Fisk's Superheroes",
+  "description": "Adds a variety of Superheroes, primarily from the DCTV shared universe and the Marvel Cinematic Universe.",
+  "version": "1.1.4",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["FiskFille"],
+  "credits": "Kill3rCreeper, Gegy1000, Jensen Parker, iLexiconn, JurassicAlien, Omegatron",
+  "logoFile": "fiskheroes-banner.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
