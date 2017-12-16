@@ -1,0 +1,16 @@
+[
+{
+  "modid": "justicemc",
+  "name": "Justice MC",
+  "description": "Adds a few lanterns.",
+  "version": "1.0.0",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Awex__"],
+  "credits": "BBovard",
+  "logoFile": "justicemc-banner.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]

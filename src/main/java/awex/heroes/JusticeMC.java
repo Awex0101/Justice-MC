@@ -1,7 +1,6 @@
 package awex.heroes;
 
 import awex.heroes.client.render.gui.RenderGuiHandler;
-import awex.heroes.common.network.NetworkHandler;
 import awex.heroes.common.proxy.ClientProxy;
 import awex.heroes.common.proxy.CommonProxy;
 import cpw.mods.fml.common.Loader;
@@ -13,7 +12,6 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
-import net.minecraft.client.resources.ResourcePackListEntry;
 import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid = awex.heroes.JusticeMC.MODID, name = JusticeMC.NAME, version = JusticeMC.VERSION, guiFactory = "awex.heroes.client.gui.ModGuiFactory")
