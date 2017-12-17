@@ -1,60 +1,44 @@
 package awex.heroes.common.data;
 
+
 import awex.heroes.common.ability.Abilities;
 import com.google.common.base.Predicate;
-import fiskfille.core.registry.FiskRegistryNamespaced;
-import fiskfille.heroes.common.ability.Ability;
 import fiskfille.heroes.common.data.SHData;
 import net.minecraft.entity.Entity;
 
 import java.lang.reflect.Field;
 
 public class Data<T> extends SHData{
-    public static final FiskRegistryNamespaced<SHData<?>> REGISTRY = new FiskRegistryNamespaced("justicemc", (String)null);
-
-    //
     public static final SHData<String> CONSTRUCT;
     public static final SHData<Float> CONSTRUCT_TIMER;
     public static final SHData<Boolean> CONSTRUCTING;
-    //
-    final DataFactory<T> defaultValue;
 
-
-    protected Data(DataFactory<T> defaultVal, Predicate<Entity> p)
-    {
-        defaultValue = defaultVal;
+    protected Data(SHData.DataFactory<T> defaultVal, Predicate<Entity> p) {
+        super(defaultVal, p);
     }
 
-    protected Data(final T defaultVal, Predicate<Entity> p)
-    {
-        this(new DataFactory<T>()
-        {
-            @Override
-            public T construct()
-            {
+    protected Data(final T defaultVal, Predicate<Entity> p) {
+        this(new SHData.DataFactory<T>() {
+            public T construct() {
                 return defaultVal;
             }
         }, p);
     }
 
-    protected Data(DataFactory<T> defaultVal)
-    {
-        this(defaultVal, null);
+    protected Data(SHData.DataFactory<T> defaultVal) {
+        this(defaultVal, (Predicate)null);
     }
 
-    protected Data(T defaultVal)
-    {
-        this(defaultVal, null);
+    protected Data(T defaultVal) {
+        this((DataFactory<T>) defaultVal, (Predicate)null);
     }
 
-    protected Data(Predicate<Entity> p)
-    {
-        this((T) null, p);
+    protected Data(Predicate<Entity> p) {
+        this((DataFactory<T>) null, p);
     }
 
-    protected Data()
-    {
-        this((T) null);
+    protected Data() {
+        this((Predicate<Entity>) null);
     }
     static {
         CONSTRUCT = new Data(Abilities.CONSTRUCT);
@@ -75,6 +59,5 @@ public class Data<T> extends SHData{
                 }
             }
         }
-
     }
 }
